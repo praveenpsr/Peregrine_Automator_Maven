@@ -1,0 +1,7 @@
+Configuration
+D:\ScreenShotPath
+Element
+C:\Users\P.S.R.Praveen\Desktop\ASI_Standard_JRE_v1.0_Pack\Sample Excel Input Formats\LinearRowModelInputSample.xlsx
+D:\AppiumAutomationStandalone\Report
+2
+Excel - Linear ROW Format
