@@ -164,8 +164,8 @@ public class ConfigurationLoader {
     public static void main(String[] args) throws IOException, Exception {
 
         input = new Scanner(System.in);
-        System.out.println("----------------Welcome to ASI Automator!--------------------");
-        System.out.println("-----Designed and Developed by Praveen PSR-Priya-Sheefa------");
+        System.out.println("----------------Welcome to Peregrine Automator!--------------------");
+        System.out.println("----------Designed and Developed by Praveen PSR--------------");
         System.out.println("Please select the Run Mode ");
         System.out.println("1.Windows UI ");
         System.out.println("2.Native Console ");

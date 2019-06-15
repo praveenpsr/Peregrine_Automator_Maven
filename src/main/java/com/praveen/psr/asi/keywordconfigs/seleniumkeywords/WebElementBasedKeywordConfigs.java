@@ -9,6 +9,7 @@
 package com.praveen.psr.asi.keywordconfigs.seleniumkeywords;
 
 import com.praveen.psr.asi.consoleandUI.ASIConsole;
+import com.praveen.psr.asi.customExceptions.TextMismatchException;
 import com.praveen.psr.asi.frameworkcore.ObjectProperties;
 import com.praveen.psr.asi.frameworkcore.TestCase;
 import com.praveen.psr.asi.frameworkcore.TestStep;
@@ -29,7 +30,7 @@ public class WebElementBasedKeywordConfigs {
         switch (Keywordaction) {//Switch case opened
             case "MoveScrollBar": {//Mouse Scroll Bar move Keyword Functionality
                 if (testcaseinstance.getTestCaseDescription().equals("safari")) {//CHANGE IT TO THE BROWSER NAME
-                    ASIConsole.out.println(testcaseinstance,"Mouse Scrolling is unsuppported in Safari. Action Skipped");
+                    ASIConsole.out.println(testcaseinstance, "Mouse Scrolling is unsuppported in Safari. Action Skipped");
                 } else {
                     String[] offsetsplit = ActionValue.split(",");
                     Actions action = new Actions(driver);
@@ -40,7 +41,7 @@ public class WebElementBasedKeywordConfigs {
             }
             case "MouseClickHold": {//Mouse Click and Hold Keyword Functionality
                 if (testcaseinstance.getTestCaseDescription().equals("safari")) {//CHANGE IT TO THE BROWSER NAME
-                    ASIConsole.out.println(testcaseinstance,"Mouse Click and Hold unsuppported in Safari. Action Skipped");
+                    ASIConsole.out.println(testcaseinstance, "Mouse Click and Hold unsuppported in Safari. Action Skipped");
                 } else {
                     Actions action = new Actions(driver);
                     action.clickAndHold(WB).build().perform();
@@ -50,7 +51,7 @@ public class WebElementBasedKeywordConfigs {
             }
             case "MouseHover": {//Mouse Hover Keyword Functionality
                 if (testcaseinstance.getTestCaseDescription().equals("safari")) {//CHANGE IT TO THE BROWSER NAME
-                    ASIConsole.out.println(testcaseinstance,"Mouse Hover is unsuppported in Safari. Action Skipped");
+                    ASIConsole.out.println(testcaseinstance, "Mouse Hover is unsuppported in Safari. Action Skipped");
                 } else {
                     Actions action = new Actions(driver);
                     action.moveToElement(WB);
@@ -62,6 +63,13 @@ public class WebElementBasedKeywordConfigs {
             }
             case "Dropdown Select": {//Drop down Keyword Functionality
                 new Select(WB).selectByVisibleText(ActionValue);
+                break;
+            }
+            case "Check Text": {//Check Text Keyword Functionality
+                String ElementText = WB.getText();
+                if (!ActionValue.equals(ElementText)) {
+                    throw new TextMismatchException("Expected Text : " + ActionValue + " but Actual Text : " + ElementText);
+                }
                 break;
             }
             default: {

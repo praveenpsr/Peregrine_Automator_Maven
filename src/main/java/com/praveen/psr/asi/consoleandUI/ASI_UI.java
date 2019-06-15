@@ -104,43 +104,62 @@ public class ASI_UI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        configsheetTF = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        screenshotpathTF = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        configsheetTF = new javax.swing.JTextField();
+        screenshotpathTF = new javax.swing.JTextField();
         screenshotandreportprefixTF = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        saveconfigurationbutton = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        TestNGthreadpoolSpinner = new javax.swing.JSpinner();
+        jPanel3 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        excelinputTF = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        excelinputTF = new javax.swing.JTextField();
         outputreportpathTF = new javax.swing.JTextField();
-        startbutton = new javax.swing.JButton();
-        forcestopbutton = new javax.swing.JButton();
+        inputexceltypeCombobox = new javax.swing.JComboBox<String>();
+        jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel9 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        inputexceltypeCombobox = new javax.swing.JComboBox<String>();
-        TestNGthreadpoolSpinner = new javax.swing.JSpinner();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        startbutton = new javax.swing.JButton();
+        forcestopbutton = new javax.swing.JButton();
+        saveconfigurationbutton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ASI Automator v1.0");
+        setTitle("Peregrine Automator v1.0");
 
         jPanel1.setToolTipText("");
         jPanel1.setMaximumSize(new java.awt.Dimension(4000, 4000));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setText("ASI Framework Configuration");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Peregrine Automator");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setText("DESIGNED AND DEVELOPED BY PRAVEEN PSR  ");
+
+        jLabel5.setFont(new java.awt.Font("MS Reference Sans Serif", 2, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel5.setText("powered by ASI framework");
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Tool Configuration", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         jLabel6.setText("Central Configuration Sheet Name");
+
+        jLabel7.setText("Screen Shot Folder Path");
+
+        jLabel8.setText("Screenshot and Report Filename Prefix");
+
+        jLabel9.setText("Parallel Execution Limit");
 
         configsheetTF.setText("jTextField1");
         configsheetTF.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -148,8 +167,6 @@ public class ASI_UI extends javax.swing.JFrame {
                 configsheetTFKeyTyped(evt);
             }
         });
-
-        jLabel7.setText("Screen Shot Path");
 
         screenshotpathTF.setText("jTextField1");
         screenshotpathTF.addActionListener(new java.awt.event.ActionListener() {
@@ -163,8 +180,6 @@ public class ASI_UI extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Screenshot and Report Prefix");
-
         screenshotandreportprefixTF.setText("jTextField1");
         screenshotandreportprefixTF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -172,8 +187,172 @@ public class ASI_UI extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel12.setText("Framework Configuration");
+        TestNGthreadpoolSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                TestNGthreadpoolSpinnerStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(configsheetTF, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(screenshotandreportprefixTF, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(screenshotpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TestNGthreadpoolSpinner, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap()))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 134, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(4, 4, 4)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(configsheetTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(13, 13, 13)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(screenshotpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(13, 13, 13)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(screenshotandreportprefixTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8))
+                    .addGap(13, 13, 13)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel9)
+                        .addComponent(TestNGthreadpoolSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "I/O Configuration", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+
+        jLabel15.setText("Excel File Path");
+
+        jLabel16.setText("Output Report Path");
+
+        jLabel18.setText("Input Excel Type");
+
+        excelinputTF.setText("jTextField1");
+        excelinputTF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                excelinputTFKeyTyped(evt);
+            }
+        });
+
+        outputreportpathTF.setText("jTextField1");
+        outputreportpathTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                outputreportpathTFActionPerformed(evt);
+            }
+        });
+        outputreportpathTF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                outputreportpathTFKeyTyped(evt);
+            }
+        });
+
+        inputexceltypeCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Excel - Linear ROW Format", "Excel - PageObjectModel Format" }));
+        inputexceltypeCombobox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputexceltypeComboboxActionPerformed(evt);
+            }
+        });
+        inputexceltypeCombobox.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                inputexceltypeComboboxKeyReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(outputreportpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(excelinputTF, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(inputexceltypeCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6))
+        );
+
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {excelinputTF, outputreportpathTF});
+
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(excelinputTF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(outputreportpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(inputexceltypeCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Execution Progress and Console", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(15);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 11)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setToolTipText("");
+        jTextArea1.setDragEnabled(true);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel17.setText("Execution Progress");
+
+        jLabel3.setText("/ 10000");
+
+        jLabel2.setText("jLabel2");
+
+        startbutton.setBackground(new java.awt.Color(51, 255, 51));
+        startbutton.setText("Start");
+        startbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startbuttonActionPerformed(evt);
+            }
+        });
+
+        forcestopbutton.setBackground(new java.awt.Color(255, 0, 51));
+        forcestopbutton.setText("Force Stop");
+        forcestopbutton.setAlignmentY(0.0F);
+        forcestopbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forcestopbuttonActionPerformed(evt);
+            }
+        });
 
         saveconfigurationbutton.setBackground(new java.awt.Color(51, 204, 255));
         saveconfigurationbutton.setText("Save Configuration");
@@ -188,224 +367,100 @@ public class ASI_UI extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel14.setText("I/O Configuration");
-
-        jLabel15.setText("Excel File Path");
-
-        excelinputTF.setText("jTextField1");
-        excelinputTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                excelinputTFKeyTyped(evt);
-            }
-        });
-
-        jLabel16.setText("Output Report Path");
-
-        outputreportpathTF.setText("jTextField1");
-        outputreportpathTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                outputreportpathTFActionPerformed(evt);
-            }
-        });
-        outputreportpathTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                outputreportpathTFKeyTyped(evt);
-            }
-        });
-
-        startbutton.setBackground(new java.awt.Color(51, 255, 51));
-        startbutton.setText("Start");
-        startbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startbuttonActionPerformed(evt);
-            }
-        });
-
-        forcestopbutton.setBackground(new java.awt.Color(255, 0, 51));
-        forcestopbutton.setText("Force Stop");
-        forcestopbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                forcestopbuttonActionPerformed(evt);
-            }
-        });
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setColumns(15);
-        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 13)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setToolTipText("");
-        jTextArea1.setDragEnabled(true);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jLabel9.setText("TestNG Thread Pool Threshold");
-
-        jLabel2.setText("jLabel2");
-
-        jLabel3.setText("/ 10000");
-
-        jLabel17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel17.setText("Execution Progress");
-
-        jLabel18.setText("Input Excel Type");
-
-        inputexceltypeCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Excel - Linear ROW Format", "Excel - PageObjectModel Format" }));
-        inputexceltypeCombobox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputexceltypeComboboxActionPerformed(evt);
-            }
-        });
-        inputexceltypeCombobox.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                inputexceltypeComboboxKeyReleased(evt);
-            }
-        });
-
-        TestNGthreadpoolSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                TestNGthreadpoolSpinnerStateChanged(evt);
-            }
-        });
-
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("Designed and Developed by Praveen PSR");
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(startbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(forcestopbutton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(saveconfigurationbutton))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3))
+                            .addComponent(jLabel17))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jScrollPane1)
+                    .addGap(8, 8, 8)))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(118, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(forcestopbutton)
+                    .addComponent(saveconfigurationbutton)
+                    .addComponent(startbutton))
+                .addContainerGap())
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(125, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 361, Short.MAX_VALUE)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(outputreportpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(excelinputTF, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(183, 183, 183)
-                                .addComponent(inputexceltypeCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(51, 51, 51)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(configsheetTF, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
-                                        .addComponent(screenshotandreportprefixTF)
-                                        .addComponent(screenshotpathTF))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3))
-                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(TestNGthreadpoolSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(66, 66, 66))
+                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(10, 10, 10))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel14))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel12))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(startbutton)
-                        .addGap(97, 97, 97)
-                        .addComponent(forcestopbutton)
-                        .addGap(91, 91, 91)
-                        .addComponent(saveconfigurationbutton))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
         );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {excelinputTF, outputreportpathTF});
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel12, jLabel14, jLabel17});
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel15, jLabel16});
-
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel12)
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(configsheetTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(screenshotpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(screenshotandreportprefixTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(TestNGthreadpoolSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel14)
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(excelinputTF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(outputreportpathTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16))
+                .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(inputexceltypeCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jLabel17)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(forcestopbutton)
-                    .addComponent(saveconfigurationbutton)
-                    .addComponent(startbutton))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel14, jLabel17});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -413,16 +468,71 @@ public class ASI_UI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void inputexceltypeComboboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputexceltypeComboboxKeyReleased
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_inputexceltypeComboboxKeyReleased
+
+    private void inputexceltypeComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputexceltypeComboboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputexceltypeComboboxActionPerformed
+
+    private void outputreportpathTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_outputreportpathTFKeyTyped
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_outputreportpathTFKeyTyped
+
+    private void outputreportpathTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputreportpathTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_outputreportpathTFActionPerformed
+
+    private void excelinputTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_excelinputTFKeyTyped
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_excelinputTFKeyTyped
+
+    private void TestNGthreadpoolSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_TestNGthreadpoolSpinnerStateChanged
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_TestNGthreadpoolSpinnerStateChanged
+
+    private void screenshotandreportprefixTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_screenshotandreportprefixTFKeyTyped
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_screenshotandreportprefixTFKeyTyped
+
+    private void screenshotpathTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_screenshotpathTFKeyTyped
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_screenshotpathTFKeyTyped
+
+    private void screenshotpathTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_screenshotpathTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_screenshotpathTFActionPerformed
+
+    private void configsheetTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_configsheetTFKeyTyped
+        saveconfigurationbutton.setVisible(true);
+    }//GEN-LAST:event_configsheetTFKeyTyped
+
+    private void saveconfigurationbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveconfigurationbuttonActionPerformed
+        try {
+            saveFrameworkConfig();       // TODO add your handling code here:
+            saveconfigurationbutton.setVisible(false);
+        } catch (Exception ex) {
+            Logger.getLogger(ASI_UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_saveconfigurationbuttonActionPerformed
+
+    private void saveconfigurationbuttonStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_saveconfigurationbuttonStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveconfigurationbuttonStateChanged
 
     private void forcestopbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forcestopbuttonActionPerformed
         Activities_Ongoing("Quitting Tests..Force failing all running Tests..Executions will be Stalled.. This may take time..");
@@ -479,59 +589,6 @@ public class ASI_UI extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_startbuttonActionPerformed
-
-    private void outputreportpathTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_outputreportpathTFKeyTyped
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_outputreportpathTFKeyTyped
-
-    private void outputreportpathTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_outputreportpathTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_outputreportpathTFActionPerformed
-
-    private void excelinputTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_excelinputTFKeyTyped
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_excelinputTFKeyTyped
-
-    private void saveconfigurationbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveconfigurationbuttonActionPerformed
-        try {
-            saveFrameworkConfig();       // TODO add your handling code here:
-            saveconfigurationbutton.setVisible(false);
-        } catch (Exception ex) {
-            Logger.getLogger(ASI_UI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_saveconfigurationbuttonActionPerformed
-
-    private void saveconfigurationbuttonStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_saveconfigurationbuttonStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveconfigurationbuttonStateChanged
-
-    private void screenshotandreportprefixTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_screenshotandreportprefixTFKeyTyped
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_screenshotandreportprefixTFKeyTyped
-
-    private void screenshotpathTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_screenshotpathTFKeyTyped
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_screenshotpathTFKeyTyped
-
-    private void screenshotpathTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_screenshotpathTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_screenshotpathTFActionPerformed
-
-    private void configsheetTFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_configsheetTFKeyTyped
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_configsheetTFKeyTyped
-
-    private void inputexceltypeComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputexceltypeComboboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputexceltypeComboboxActionPerformed
-
-    private void TestNGthreadpoolSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_TestNGthreadpoolSpinnerStateChanged
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_TestNGthreadpoolSpinnerStateChanged
-
-    private void inputexceltypeComboboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputexceltypeComboboxKeyReleased
-        saveconfigurationbutton.setVisible(true);
-    }//GEN-LAST:event_inputexceltypeComboboxKeyReleased
 
     /**
      * @param args the command line arguments
@@ -611,8 +668,6 @@ public class ASI_UI extends javax.swing.JFrame {
     private javax.swing.JButton forcestopbutton;
     private javax.swing.JComboBox<String> inputexceltypeCombobox;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -620,11 +675,15 @@ public class ASI_UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
